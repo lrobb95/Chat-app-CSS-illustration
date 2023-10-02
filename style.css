@@ -124,8 +124,7 @@ article.phone {
 header.phone-header {
     display: flex;
     width: 100%;
-    min-height: 20%;
-    max-height: 25%;
+    min-height: 25%;
     padding: 1rem;
     background-image: linear-gradient(var(--light-magenta), var(--light-violet));
     border-radius: 0 0 .25rem .25rem;
