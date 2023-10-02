@@ -1,0 +1,367 @@
+/* import font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+
+    /* =============
+        text colors 
+    ================ */
+
+    --sub-heading-ui: hsl(276, 100%, 81%);
+    --chat-left: hsla(276, 55%, 52%, .1);
+    --chat-right: hsla(271, 15%, 43%, .1);
+    --placeholder-text: hsl(206, 6%, 79%);
+    --main-heading: hsl(271, 36%, 24%);
+    --paragraph: hsl(270, 7%, 64%);
+
+    /* =================================
+        gradients for background colors
+    ==================================== */
+
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+
+    /* ================
+       secondary colors
+       ================ */
+
+    --white: hsl(0, 0%, 100%);
+    --app-background: hsl(270, 20%, 96%);
+    --submit-btn-background: hsl(271, 36%, 24%);
+    --radio-btn-outline: hsl(289, 100%, 72%);
+
+    /* ==========
+       typography
+       ========== */
+
+    --fs: 1rem;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+    --ff-rubik: 'rubik', sans-serif;      
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--app-background);
+    font-family: var(--ff-rubik);
+}
+
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--app-background);
+}
+
+.shape-container {
+    display: flex;
+    height: 100%;
+}
+
+.pill-shape-background {
+    position: absolute;
+    top: 0;
+    left: -3rem;
+    min-width: 36.15%;
+    border-radius: 0 0 15rem 15rem;
+    height: 80%;
+    background-image: linear-gradient(to bottom left, var(--light-magenta), var(--light-violet));
+}
+
+.pill-shape-background-light {
+    position: absolute;
+    bottom: 0;
+    right: -10rem;
+    min-width: 36.25%;
+    border-radius: 14rem 14rem 0 0;
+    height: 87.5%;
+    background-color: hsla(271, 36%, 24%, .02);
+}
+
+.content-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 4rem; */
+    width: 90%;
+    height: 100%;
+}
+
+article.phone {
+    position: relative;
+    display: flex;
+    justify-self: end;
+    flex-direction: column;
+    width: 15rem;
+    max-height: 100%;
+    background-color: var(--app-background);
+    border: 8px solid var(--white);
+    border-radius: 1.5625rem;
+    box-shadow: 10px 8px 12px 0 rgba(0, 0, 0, .05);
+    overflow: hidden;
+}
+
+.pill {
+    position: absolute;
+    top: -8px;
+    left: 25%;
+    width: 50%;
+    height: 1.5rem;
+    border-radius: .6rem;
+    background-color: var(--white);
+}
+
+header.phone-header {
+    display: flex;
+    width: 100%;
+    min-height: 17.5%;
+    max-height: 25%;
+    padding: 1rem;
+    background-image: linear-gradient(var(--light-magenta), var(--light-violet));
+    border-radius: 0 0 .25rem .25rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.profile-img {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(images/avatar.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.group h1 {
+    font-size: .65rem;
+    font-weight: var(--fw-500);
+    color: var(--white);
+}
+
+.group p {
+    font-size: .4rem;
+    color: var(--sub-heading-ui);
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    font-size: .5rem;
+    gap: .5rem;
+    padding: 1rem .5rem;
+}
+
+.messages p {
+    max-width: 21ch;
+}
+
+.chat-box-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 55%;
+    max-height: 100%;
+    background-color: var(--chat-left);
+    border-radius: .5rem .5rem .5rem .125rem;
+    padding: .25rem;
+}
+
+.chat-box-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 55%;
+    max-width: 55%;
+    max-height: 100%;
+    background-color: var(--chat-right);
+    border-radius: .5rem .5rem .125rem .5rem;
+    padding: .25rem;
+}
+
+.chat-box-right-long {
+    margin-left: 45%;
+    max-height: 100%;
+    max-width: 55%;
+    background-color: var(--chat-right);
+    border-radius: .5rem .5rem .125rem .5rem;
+    padding: .25rem;
+}
+
+.group-img {
+    display: flex;
+    gap: .25rem;
+    margin-left: 44.5%;
+}
+
+.dog-pic-1 {
+    width: 2.25rem;
+    height: 2.25rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    background-image: url(images/dog-image-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dog-pic-2 {
+    width: 2.25rem;
+    height: 2.25rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    background-image: url(images/dog-image-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dog-pic-3 {
+    width: 2.25rem;
+    height: 2.25rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    background-image: url(images/dog-image-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 75%;
+    height: 100%;
+    padding: .5rem;
+    border-radius: .5rem .5rem .5rem .125rem;
+    background-image: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+}
+
+.group-text {
+    color: var(--sub-heading-ui);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.radio-btn {
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    outline: 1px solid var(--radio-btn-outline);
+}
+
+.choice span {
+    font-size: 1rem;
+    font-weight: var(--fw-500);
+    color: var(--white);
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    color: var(--placeholder-text);
+    padding: 1rem;
+    border-radius: 10rem;
+    background-color: var(--white);
+}
+
+article.booking-explanation {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-explanation h1 {
+    font-size: 2rem;
+    font-weight: var(--fw-500);
+    padding-bottom: 1.5rem;
+    color: var(--main-heading);
+}
+
+.p-container {
+    font-size: var(--fs);
+    color: var(--paragraph);
+    width: 30ch;
+}
+
+@media (width < 800px) {
+    body {
+        height: 100%;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        padding-top: 25%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        z-index: 10;
+    }
+
+    .pill-shape-background {
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: -3rem; */
+        min-width: 62.5%;
+        border-radius: 0 0 20rem 20rem;
+        height: 70%;
+        /* background-image: linear-gradient(to bottom left, var(--light-magenta), var(--light-violet)); */
+    }
+
+
+
+    .booking-explanation {
+        text-align: center;
+        padding-top: 2rem;
+        font-size: .925rem;
+        gap: 1rem;
+    }
+
+    .booking-explanation h1 {
+        font-size: 1.75rem;
+    }
+
+    .attribution {
+        padding-top: 2rem;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
